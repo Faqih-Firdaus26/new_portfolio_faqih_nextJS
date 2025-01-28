@@ -5,6 +5,7 @@ interface Certificate {
   issuer: string;
   year: string;
   image: string;
+  link: string;
 }
 
 export default function CertificatesSection() {
@@ -14,26 +15,31 @@ export default function CertificatesSection() {
       issuer: "Samsung Innovation Campus",
       year: "2024",
       image: "/certificates/samsung-cert.jpg",
+      link: "https://example.com/samsung-cert",
     },
     {
       title: "Fullstack Developer Certification",
       issuer: "GITS ID",
       year: "2023",
       image: "/certificates/gits-cert.jpg",
+      link: "https://example.com/gits-cert",
     },
   ];
 
   return (
-    <section id="certificates" className="py-16 bg-[#FFFFFF]">
+    <section id="certificates" className="py-16 bg-[#1E293B]">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-[#00ABE4] text-center mb-8">
+        <h2 className="text-3xl font-bold text-[#E9F1FA] text-center mb-8">
           Certificates
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certificates.map((cert, index) => (
-            <div
+            <a
               key={index}
-              className="bg-[#E9F1FA] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#334155] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <div className="relative h-52 w-full">
                 <Image
@@ -45,14 +51,14 @@ export default function CertificatesSection() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#00ABE4] mb-2">
+                <h3 className="text-xl font-semibold text-[#E9F1FA] mb-2">
                   {cert.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[#CBD5E1]">
                   {cert.issuer} • {cert.year}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

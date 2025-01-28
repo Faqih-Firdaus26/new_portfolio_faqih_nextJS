@@ -6,7 +6,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-6 text-center">
         <div className="relative w-44 h-44 mx-auto mb-10">
           <Image
-            src="/profile.jpg"
+            src="/about/faqih.jpg"
             alt="Profile Picture"
             fill
             className="object-cover rounded-full border-4 border-[#00ABE4] shadow-xl"

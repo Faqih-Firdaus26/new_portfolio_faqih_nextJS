@@ -16,7 +16,7 @@ export default function FooterSection() {
             <FaEnvelope className="text-3xl" />
           </a>
           <a
-            href="https://linkedin.com/in/muhammad-faqih-al-firdaus"
+            href="https://www.linkedin.com/in/muhammad-faqih-al-firdaus-126a86223/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-[#00ABE4] transition-all duration-300 transform hover:scale-110"

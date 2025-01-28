@@ -8,7 +8,7 @@ export default function ExperienceSection() {
       duration: "June 2024 - October 2024",
       description:
         "Developed web applications using Laravel for multiple provinces in Indonesia, collaborating with a team to implement new features and fix bugs.",
-      logo: "/logos/fyp-media-logo.png",
+      logo: "/logos/fyp-media.jpeg",
       companyLink: "https://fypmedia.com",
     },
     {
@@ -17,7 +17,7 @@ export default function ExperienceSection() {
       duration: "2024",
       description:
         "Worked on generative AI projects, training models with fact-checking, story-writing, and response evaluation.",
-      logo: "/logos/outlier-ai-logo.png",
+      logo: "/logos/outlier.jpeg",
       companyLink: "https://outlier.ai",
     },
     {
@@ -26,7 +26,7 @@ export default function ExperienceSection() {
       duration: "2023",
       description:
         "Learned and applied Laravel, API development, and database management to build scalable web applications.",
-      logo: "/logos/gits-id-logo.png",
+      logo: "/logos/gits.png",
       companyLink: "https://gits.id",
     },
   ];
