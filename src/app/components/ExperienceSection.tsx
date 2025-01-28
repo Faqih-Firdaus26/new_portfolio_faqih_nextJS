@@ -32,19 +32,16 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section
-      id="experience"
-      className="bg-gradient-to-b from-[#E9F1FA] to-[#F4F9FF] py-16"
-    >
+    <section id="experience" className="bg-[#1E293B] py-16">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-[#007BCE] text-center mb-12">
+        <h2 className="text-4xl font-bold text-[#E9F1FA] text-center mb-12">
           Experience
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 transform hover:-translate-y-2"
+              className="bg-[#334155] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 transform hover:-translate-y-2"
             >
               <div className="flex items-center gap-6 mb-4">
                 <a
@@ -53,7 +50,7 @@ export default function ExperienceSection() {
                   rel="noopener noreferrer"
                   className="shrink-0"
                 >
-                  <div className="relative w-16 h-16 bg-[#F0F8FF] rounded-full p-2">
+                  <div className="relative w-16 h-16 bg-[#1E293B] rounded-full p-2">
                     <Image
                       src={exp.logo}
                       alt={`${exp.company} Logo`}
@@ -63,15 +60,17 @@ export default function ExperienceSection() {
                   </div>
                 </a>
                 <div>
-                  <h3 className="text-2xl font-semibold text-[#007BCE]">
+                  <h3 className="text-2xl font-semibold text-[#E9F1FA]">
                     {exp.role}
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-[#94A3B8]">
                     {exp.company} • {exp.duration}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 leading-relaxed">{exp.description}</p>
+              <p className="text-[#CBD5E1] leading-relaxed">
+                {exp.description}
+              </p>
             </div>
           ))}
         </div>

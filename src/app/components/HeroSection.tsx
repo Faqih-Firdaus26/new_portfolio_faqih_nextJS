@@ -7,14 +7,14 @@ import { FC } from "react";
 
 const HeroSection: FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-[#007BCE] to-[#00ABE4] text-white min-h-screen flex items-center overflow-hidden">
+    <section className="relative bg-[#1E293B] text-white min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/abstract-background.svg"
           alt="Background Pattern"
           layout="fill"
           objectFit="cover"
-          className="opacity-20"
+          className="opacity-10"
         />
       </div>
 
@@ -26,7 +26,7 @@ const HeroSection: FC = () => {
         >
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
             Hi, I&apos;m{" "}
-            <span className="text-[#E9F1FA] underline decoration-[#E9F1FA]">
+            <span className="text-[#00ABE4] underline decoration-[#00ABE4]">
               Muhammad Faqih Al Firdaus
             </span>
           </h1>
@@ -45,7 +45,7 @@ const HeroSection: FC = () => {
               delaySpeed={1000}
             />
           </p>
-          <p className="text-lg md:text-xl font-light mb-12 text-[#E9F1FA]">
+          <p className="text-lg md:text-xl font-light mb-12 text-[#94A3B8]">
             Crafting modern and interactive web experiences that captivate and
             engage.
           </p>
@@ -53,7 +53,7 @@ const HeroSection: FC = () => {
           <div className="flex justify-center space-x-6">
             <motion.a
               href="#about"
-              className="bg-[#E9F1FA] text-[#00ABE4] py-3 px-8 rounded-full shadow-lg font-semibold hover:bg-white hover:shadow-xl transition-all duration-300"
+              className="bg-[#00ABE4] text-white py-3 px-8 rounded-full shadow-lg font-semibold hover:bg-[#007BCE] hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -61,7 +61,7 @@ const HeroSection: FC = () => {
             </motion.a>
             <motion.a
               href="#contact"
-              className="bg-transparent text-white border-2 border-[#E9F1FA] py-3 px-8 rounded-full shadow-lg font-semibold hover:bg-[#E9F1FA] hover:text-[#007BCE] hover:shadow-xl transition-all duration-300"
+              className="bg-transparent text-white border-2 border-[#00ABE4] py-3 px-8 rounded-full shadow-lg font-semibold hover:bg-[#00ABE4] hover:text-white hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
