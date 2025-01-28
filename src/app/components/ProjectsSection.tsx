@@ -30,16 +30,16 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="bg-white py-16">
+    <section id="projects" className="bg-[#FFFFFF] py-16">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-blue-600 text-center mb-8">
+        <h2 className="text-3xl font-bold text-[#00ABE4] text-center mb-8">
           Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-[#E9F1FA] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative h-48 w-full">
                 <Image
@@ -47,29 +47,32 @@ export default function ProjectsSection() {
                   alt={project.title}
                   layout="fill"
                   objectFit="cover"
+                  className="transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-xl font-semibold text-[#00ABE4] mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex justify-between items-center">
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="bg-[#00ABE4] text-white text-xs px-3 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex justify-end">
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 hover:text-blue-600 transition-colors"
+                    className="text-gray-600 hover:text-[#00ABE4] transition-colors duration-300"
                   >
                     <FaGithub className="text-2xl" />
                   </a>

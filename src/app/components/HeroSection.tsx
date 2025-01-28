@@ -3,29 +3,34 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
+import { FC } from "react";
 
-export default function HeroSection() {
+const HeroSection: FC = () => {
   return (
-    <section className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
+    <section className="relative bg-gradient-to-br from-[#007BCE] to-[#00ABE4] text-white min-h-screen flex items-center overflow-hidden">
+      <div className="absolute inset-0">
         <Image
           src="/abstract-background.svg"
           alt="Background Pattern"
           layout="fill"
           objectFit="cover"
+          className="opacity-20"
         />
       </div>
+
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, Im{" "}
-            <span className="text-yellow-400">Muhammad Faqih Al Firdaus</span>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+            Hi, I&apos;m{" "}
+            <span className="text-[#E9F1FA] underline decoration-[#E9F1FA]">
+              Muhammad Faqih Al Firdaus
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-yellow-400 mb-4">
+          <p className="text-2xl md:text-3xl font-medium mb-6">
             <Typewriter
               words={[
                 "A Frontend Developer",
@@ -40,22 +45,24 @@ export default function HeroSection() {
               delaySpeed={1000}
             />
           </p>
-          <p className="text-lg md:text-xl font-medium mb-8">
-            Crafting modern and interactive web experiences.
+          <p className="text-lg md:text-xl font-light mb-12 text-[#E9F1FA]">
+            Crafting modern and interactive web experiences that captivate and
+            engage.
           </p>
-          <div className="flex justify-center space-x-4">
+
+          <div className="flex justify-center space-x-6">
             <motion.a
               href="#about"
-              className="bg-yellow-400 text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105"
-              whileHover={{ scale: 1.05 }}
+              className="bg-[#E9F1FA] text-[#00ABE4] py-3 px-8 rounded-full shadow-lg font-semibold hover:bg-white hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
               About Me
             </motion.a>
             <motion.a
               href="#contact"
-              className="bg-gray-900 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105"
-              whileHover={{ scale: 1.05 }}
+              className="bg-transparent text-white border-2 border-[#E9F1FA] py-3 px-8 rounded-full shadow-lg font-semibold hover:bg-[#E9F1FA] hover:text-[#007BCE] hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
               Contact Me
@@ -65,4 +72,6 @@ export default function HeroSection() {
       </div>
     </section>
   );
-}
+};
+
+export default HeroSection;

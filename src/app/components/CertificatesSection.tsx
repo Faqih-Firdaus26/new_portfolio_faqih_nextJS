@@ -1,36 +1,57 @@
+import Image from "next/image";
+
+interface Certificate {
+  title: string;
+  issuer: string;
+  year: string;
+  image: string;
+}
+
 export default function CertificatesSection() {
-  const certificates = [
+  const certificates: Certificate[] = [
     {
       title: "AI & IoT Bootcamp",
       issuer: "Samsung Innovation Campus",
       year: "2024",
-      icon: "🤖",
+      image: "/certificates/samsung-cert.jpg",
     },
     {
       title: "Fullstack Developer Certification",
       issuer: "GITS ID",
       year: "2023",
-      icon: "💻",
+      image: "/certificates/gits-cert.jpg",
     },
   ];
 
   return (
-    <section id="certificates" className="py-16 bg-white">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-blue-600 mb-8">Certificates</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section id="certificates" className="py-16 bg-[#FFFFFF]">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-[#00ABE4] text-center mb-8">
+          Certificates
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certificates.map((cert, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-[#E9F1FA] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="text-5xl mb-4">{cert.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                {cert.title}
-              </h3>
-              <p className="text-gray-600">
-                {cert.issuer} - {cert.year}
-              </p>
+              <div className="relative h-52 w-full">
+                <Image
+                  src={cert.image}
+                  alt={cert.title}
+                  layout="fill"
+                  objectFit="contain"
+                  className="p-4"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-[#00ABE4] mb-2">
+                  {cert.title}
+                </h3>
+                <p className="text-gray-600">
+                  {cert.issuer} • {cert.year}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -21,30 +21,28 @@ export default function AchievementsSection() {
   ];
 
   return (
-    <section id="achievements" className="bg-gray-50 py-16">
+    <section id="achievements" className="bg-[#E9F1FA] py-16">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-blue-600 text-center mb-8">
+        <h2 className="text-3xl font-bold text-[#00ABE4] text-center mb-8">
           Achievements
         </h2>
-        <div className="overflow-x-auto">
-          <div className="min-w-[800px] flex space-x-6">
-            {achievements.map((achievement, index) => (
-              <div
-                key={index}
-                className="bg-white p-4 rounded-lg shadow-md flex-shrink-0 w-80"
-              >
-                <div className="bg-blue-100 w-10 h-10 mb-3 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold">
-                    {achievement.year}
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {achievement.title}
-                </h3>
-                <p className="text-gray-600">{achievement.description}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {achievements.map((achievement, index) => (
+            <div
+              key={index}
+              className="bg-[#FFFFFF] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="bg-[#00ABE4] w-12 h-12 mb-4 rounded-full flex items-center justify-center text-white">
+                <span className="font-bold">{achievement.year}</span>
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-semibold text-[#00ABE4] mb-3">
+                {achievement.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {achievement.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
