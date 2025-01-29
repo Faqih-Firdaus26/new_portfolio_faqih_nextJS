@@ -121,6 +121,54 @@ export default function CertificatesSection() {
       image: "/certificates/Memulai Pemrograman dengan Python_page-0001.jpg",
       link: "https://www.dicoding.com/certificates/1OP8W6MLVXQK",
     },
+    {
+      title: "Internet of Things (IoT) - Software and Platforms (Gold)",
+      issuer: "Skilvul",
+      year: "2024",
+      image:
+        "/certificates/Completion Certificate for Internet of Things (IoT) - Software and Platforms_page-0001.jpg",
+      link: "https://drive.google.com/file/d/1oY7Jya1dCTAQGJBOyiT-OOykOlyMJRrh/view?usp=sharing",
+    },
+
+    // {
+    //   title: "Python Dasar (Gold)",
+    //   issuer: "Skilvul",
+    //   year: "2024",
+    //   image:
+    //     "/certificates/Completion Certificate for Python Dasar_page-0001.jpg",
+    //   link: "https://drive.google.com/file/d/1sHzk9JpaBFVatgfRT5WIdkewpYj4O4-w/view?usp=sharing",
+    // },
+    // {
+    //   title: "Python Lanjutan (Gold)",
+    //   issuer: "Skilvul",
+    //   year: "2024",
+    //   image: "Completion Certificate for Python Lanjutan (1)_page-0001.jpg",
+    //   link: "https://drive.google.com/file/d/1yraM3zJfR0kXHGJ8TCpk9JsY5ppICcCy/view?usp=sharing",
+    // },
+    // {
+    //   title: "Internet of Things (IoT) - Fundamentals (Gold)",
+    //   issuer: "Skilvul",
+    //   year: "2024",
+    //   image:
+    //     "/certificates/Completion Certificate for Internet of Things (IoT) - Fundamentals_page-0001.jpg",
+    //   link: "https://drive.google.com/file/d/1QckMiqbLnPCxBb9uAbqOfNZQ-UPw8OCT/view?usp=sharing",
+    // },
+    // {
+    //   title: "Algorithm & Data Structures with Python (Gold)",
+    //   issuer: "Skilvul",
+    //   year: "2024",
+    //   image:
+    //     "/certificates/Completion Certificate for Algorithm & Data Structures with Python_page-0001.jpg",
+    //   link: "https://drive.google.com/file/d/198qA5h1iQr_6d30xgtkIt4l2uvLltDSx/view?usp=sharing",
+    // },
+    {
+      title: "IoT Development with ESP32 (Gold)",
+      issuer: "Skilvul",
+      year: "2024",
+      image:
+        "/certificates/Completion Certificate for IoT Development with ESP32_page-0001.jpg",
+      link: "https://drive.google.com/file/d/11CoqKa7GTyi5o4hgMBXZ2ulXvh4Varov/view?usp=sharing",
+    },
   ];
 
   return (
@@ -129,7 +177,7 @@ export default function CertificatesSection() {
         <h2 className="text-3xl font-bold text-[#E9F1FA] text-center mb-8">
           Certificates
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {certificates.map((cert, index) => (
             <motion.div
               key={index}

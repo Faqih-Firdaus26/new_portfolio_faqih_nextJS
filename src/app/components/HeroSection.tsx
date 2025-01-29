@@ -22,7 +22,7 @@ const HeroSection: FC = () => {
       <section className="relative bg-[#1E293B] text-white min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/abstract-background.svg"
+            src="/background/background2.jpeg"
             alt="Background Pattern"
             layout="fill"
             objectFit="cover"

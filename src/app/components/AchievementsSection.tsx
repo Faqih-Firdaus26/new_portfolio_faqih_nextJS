@@ -18,6 +18,18 @@ export default function AchievementsSection() {
         "Developed a pretrained model for sentiment analysis and categorization with 95% accuracy.",
       year: "2022",
     },
+    {
+      title: "Best Presenter - Senastik Unsika",
+      description:
+        "arah perkembangan teknologi industri berkelanjutan untuk mendukung produktivitas bangsa dan regional sustainable development goals (SDGs)",
+      year: "2022",
+    },
+    {
+      title: "Finalis 4th - Engineering Scientific Competition",
+      description:
+        "Making people aware of the importance of taking care of facial skin along with the many skincare products on the market.",
+      year: "2022",
+    },
   ];
 
   return (
@@ -26,7 +38,7 @@ export default function AchievementsSection() {
         <h2 className="text-3xl font-bold text-[#E9F1FA] text-center mb-8">
           Achievements
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {achievements.map((achievement, index) => (
             <div
               key={index}
