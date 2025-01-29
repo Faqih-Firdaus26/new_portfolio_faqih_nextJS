@@ -21,15 +21,105 @@ export default function CertificatesSection() {
       title: "AI & IoT Bootcamp",
       issuer: "Samsung Innovation Campus",
       year: "2024",
-      image: "/certificates/samsung-cert.jpg",
-      link: "https://example.com/samsung-cert",
+      image:
+        "/certificates/Sertifikat Semi Final - Samsung Innovation Campus Batch 5 (2023_2024) (1)_page-0001.jpg",
+      link: "https://drive.google.com/file/d/1bBvwiZSW85yJqm3xHrCt3Ogrl9EIstk4/view?usp=sharing",
     },
     {
       title: "Fullstack Developer Certification",
       issuer: "GITS ID",
       year: "2023",
-      image: "/certificates/gits-cert.jpg",
-      link: "https://example.com/gits-cert",
+      image:
+        "/certificates/Certificate SIB 5 - MUHAMMAD FAQIH AL FIRDAUS (3)_page-0001.jpg",
+      link: "https://drive.google.com/file/d/1GilfPpOM-jXX0F-wNuPkwTB6tmTpVcvC/view?usp=sharing",
+    },
+    {
+      title: "Intern Progammer Certification",
+      issuer: "FYP Media",
+      year: "2024",
+      image: "/certificates/Intern Programmer FYP Media.png",
+      link: "https://drive.google.com/file/d/1F2Ox6_ar8oCraHOSoJi_k7dH5wXk1Exd/view?usp=sharing",
+    },
+    {
+      title: "Belajar Dasar AI",
+      issuer: "Dicoding",
+      year: "2024",
+      image: "/certificates/Belajar Dasar AI_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/53XEDJNV0PRN",
+    },
+    {
+      title: "Belajar Dasar Manajemen Proyek",
+      issuer: "Dicoding",
+      year: "2023",
+      image: "/certificates/Belajar Dasar Manajemen Proyek_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/98XWGD29LPM3",
+    },
+    {
+      title: "Belajar Dasar Pemrograman Javascript",
+      issuer: "Dicoding",
+      year: "2024",
+      image: "/certificates/Belajar Dasar Pemrograman Javascript_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/81P24Y5OQZOY",
+    },
+    {
+      title: "Belajar Dasar Pemrograman Web",
+      issuer: "Dicoding",
+      year: "2024",
+      image: "/certificates/Belajar Dasar Pemrograman Web_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/N9ZO94O0DXG5",
+    },
+    {
+      title: "Belajar Dasar Structured Query Language (SQL)",
+      issuer: "Dicoding",
+      year: "2024",
+      image:
+        "/certificates/Belajar Dasar Structured Query Language (SQL)_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/0LZ092K9RZ65",
+    },
+    {
+      title: "Belajar Dasar Visualisasi Data",
+      issuer: "Dicoding",
+      year: "2024",
+      image: "/certificates/Belajar Dasar Visualisasi Data_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/RVZKR4WOOPD5",
+    },
+    {
+      title: "Belajar Membuat Aplikasi Web dengan React",
+      issuer: "Dicoding",
+      year: "2024",
+      image:
+        "/certificates/Belajar Membuat Aplikasi Web dengan React_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/6RPNRKRKRX2M",
+    },
+    {
+      title: "Belajar Membuat Frontend Web Untuk Pemula",
+      issuer: "Dicoding",
+      year: "2024",
+      image:
+        "/certificates/Belajar Membuat Frontend Web Untuk Pemula_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/1RXYE4E2KZVM",
+    },
+    {
+      title: "Belajar Prinsip Pemrograman SOLID",
+      issuer: "Dicoding",
+      year: "2024",
+      image: "/certificates/Belajar Prinsip Pemrograman SOLID_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/1OP81MYQVZQK",
+    },
+    {
+      title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+      issuer: "Dicoding",
+      year: "2024",
+      image:
+        "/certificates/Memulai Dasar Pemrograman untuk Menjadi Pengembang Software_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/L4PQGOR72ZO1",
+    },
+    {
+      title: "Memulai Pemrograman dengan Python",
+      issuer: "Dicoding",
+      year: "2024",
+      image: "/certificates/Memulai Pemrograman dengan Python_page-0001.jpg",
+      link: "https://www.dicoding.com/certificates/1OP8W6MLVXQK",
     },
   ];
 
