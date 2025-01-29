@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import { FC, useState } from "react";
+import { AiOutlineClose, AiOutlineWhatsApp } from "react-icons/ai";
 
 const HeroSection: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,32 +84,53 @@ const HeroSection: FC = () => {
         </div>
       </section>
 
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
-            <h2 className="text-2xl font-bold text-[#1E293B] mb-4">
-              Contact Me
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Start a chat with me on WhatsApp:
-            </p>
-            <a
-              href="https://wa.me/+6289507322971"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-[#00ABE4] text-white text-center py-2 px-4 rounded-full font-semibold hover:bg-[#007BCE] transition-all duration-300"
+      {/* MODAL */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeModal}
+          >
+            <motion.div
+              className="bg-[#1E293B] text-white p-8 rounded-2xl shadow-2xl max-w-sm w-full relative"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 50, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()} // Agar tidak tertutup jika modal diklik
             >
-              Open WhatsApp
-            </a>
-            <button
-              onClick={closeModal}
-              className="mt-4 text-gray-500 hover:text-gray-700 transition-all duration-300"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+              {/* Close Button */}
+              <button
+                className="absolute top-4 right-4 text-[#CBD5E1] hover:text-white transition-all duration-300"
+                onClick={closeModal}
+              >
+                <AiOutlineClose size={24} />
+              </button>
+
+              <h2 className="text-2xl font-bold text-white mb-4 text-center">
+                Contact Me
+              </h2>
+              <p className="text-gray-300 text-center mb-6">
+                Start a chat with me on WhatsApp:
+              </p>
+
+              {/* WhatsApp Button */}
+              <a
+                href="https://wa.me/+6289507322971"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center bg-[#00ABE4] text-white py-3 px-6 rounded-full font-semibold hover:bg-[#007BCE] transition-all duration-300 space-x-2"
+              >
+                <AiOutlineWhatsApp size={24} />
+                <span>Open WhatsApp</span>
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
