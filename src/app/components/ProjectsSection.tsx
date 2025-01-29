@@ -4,12 +4,54 @@ import { FaGithub } from "react-icons/fa";
 export default function ProjectsSection() {
   const projects = [
     {
+      title: "Portfolio",
+      description: "A website portfolio Muhammad Faqih Al Firdaus",
+      technologies: ["Next js", "Tailwind CSS"],
+      image: "/projects/portfolio.jpg",
+      githubLink: "-",
+    },
+    {
       title: "Smart Vertical Farm",
       description:
         "Vertical aeroponic farm system using IoT, Machine Learning, and solar panels.",
       technologies: ["IoT", "Machine Learning", "Solar Panels"],
-      image: "/projects/smart-vertical-farm.png",
-      githubLink: "https://github.com/your-username/smart-vertical-farm",
+      image: "/projects/aeroponic.png",
+      githubLink: "",
+    },
+    {
+      title: "Smart Clinic",
+      description: "Smart Prediction Lung Diese",
+      technologies: ["Python", "Machine Learning", "Tailwind CSS"],
+      image: "/projects/smart-clinic.jpg",
+      githubLink: "",
+    },
+    {
+      title: "Silo Sirloin",
+      description: "A silo and sirloin meat sales website ",
+      technologies: ["NextJs", "Tailwind CSS", "API"],
+      image: "/projects/silo-sirloin.jpg",
+      githublink: "-",
+    },
+    {
+      title: "Jelajah Jawa",
+      description: "a java island news portal website",
+      technologies: ["Laravel", "Tailwind CSS", "Blade"],
+      image: "/projects/jelajah-jawa.jpg",
+      githublink: "-",
+    },
+    {
+      title: "Andalas News",
+      description: "a Sumatran island news portal website ",
+      technologies: ["Laravel", "Tailwind CSS", "Blade"],
+      image: "/projects/andalas-news.jpg",
+      githublink: "-",
+    },
+    {
+      title: "Borneo Bulletin",
+      description: "a kalimantan island news portal website",
+      technologies: ["Laravel", "Tailwind CSS", "Blade"],
+      image: "/projects/borneo-bulletin.jpg",
+      githublink: "-",
     },
   ];
 
