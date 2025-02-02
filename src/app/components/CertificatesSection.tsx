@@ -172,30 +172,56 @@ export default function CertificatesSection() {
   ];
 
   return (
-    <section id="certificates" className="py-16 bg-[#1E293B]">
+    <motion.section
+      id="certificates"
+      className="py-16 bg-[#1E293B]"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+    >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-[#E9F1FA] text-center mb-8">
+        <motion.h2
+          className="text-4xl font-extrabold text-center text-[#E9F1FA] mb-12 tracking-wide"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
           Certificates
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        </motion.h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {certificates.map((cert, index) => (
             <motion.div
               key={index}
               onClick={() => setSelectedCert(cert)}
-              className="cursor-pointer bg-[#334155] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
+              className="cursor-pointer bg-[#334155] rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transform transition-all duration-500 hover:scale-105"
+              whileHover={{ scale: 1.08 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: 0.1 * index,
+                },
+              }}
+              viewport={{ once: false, amount: 0.2 }}
             >
               <div className="relative h-52 w-full">
                 <Image
                   src={cert.image}
                   alt={cert.title}
                   layout="fill"
-                  objectFit="contain"
-                  className="p-4"
+                  objectFit="cover"
+                  className="p-4 rounded-t-xl"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#E9F1FA] mb-2">
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-[#E9F1FA] mb-2">
                   {cert.title}
                 </h3>
                 <p className="text-[#CBD5E1]">
@@ -207,52 +233,45 @@ export default function CertificatesSection() {
         </div>
       </div>
 
-      {/* Modal Box */}
       <AnimatePresence>
         {selectedCert && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-md flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             onClick={() => setSelectedCert(null)}
           >
             <motion.div
-              className="bg-[#1E293B] text-white p-6 rounded-2xl shadow-2xl max-w-lg w-full relative"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup jika diklik di dalamnya
+              className="bg-[#1E293B] text-white p-8 rounded-2xl shadow-2xl max-w-lg w-full relative transform transition-all duration-500 hover:scale-105"
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              onClick={(e) => e.stopPropagation()}
             >
-              {/* Tombol Close */}
               <button
                 className="absolute top-4 right-4 text-[#CBD5E1] hover:text-white transition-all duration-300"
                 onClick={() => setSelectedCert(null)}
               >
                 <AiOutlineClose size={24} />
               </button>
-
-              {/* Gambar Sertifikat */}
-              <div className="relative h-52 w-full rounded-lg overflow-hidden">
+              <div className="relative h-60 w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={selectedCert.image}
                   alt={selectedCert.title}
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                   className="p-4"
                 />
               </div>
-
-              {/* Detail Sertifikat */}
-              <h3 className="text-xl font-semibold text-white mt-4 text-center">
+              <h3 className="text-2xl font-bold text-white mt-6 text-center">
                 {selectedCert.title}
               </h3>
               <p className="text-[#CBD5E1] text-center">
                 {selectedCert.issuer} • {selectedCert.year}
               </p>
-
-              {/* Tombol View Certificate */}
               <a
                 href={selectedCert.link}
                 target="_blank"
@@ -265,6 +284,6 @@ export default function CertificatesSection() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 }
